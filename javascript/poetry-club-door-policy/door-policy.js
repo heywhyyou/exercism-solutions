@@ -64,5 +64,7 @@ export function backDoorResponse(line) {
  * @returns {string} the back door password
  */
 export function backDoorPassword(word) {
-  throw new Error("Remove this line and implement the function");
+  let firstLetterCapitalized = word[0].toUpperCase();
+  let remainingChars = word.slice(1);
+  return firstLetterCapitalized + remainingChars.toLowerCase() + ", please";
 }
