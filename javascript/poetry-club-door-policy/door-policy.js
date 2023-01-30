@@ -38,7 +38,9 @@ export function frontDoorResponse(line) {
  * @returns {string} the front door password
  */
 export function frontDoorPassword(word) {
-  throw new Error("Remove this line and implement the function");
+  let firstLetterCapitalized = word[0].toUpperCase();
+  let remainingChars = word.slice(1);
+  return firstLetterCapitalized + remainingChars.toLowerCase();
 }
 
 /**
