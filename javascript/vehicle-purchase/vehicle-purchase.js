@@ -23,10 +23,11 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
+  const rest = " is clearly the better choice.";
   if (option1 < option2) {
-    return option1 + " is clearly the better choice.";
+    return option1 + rest;
   } else {
-    return option2 + " is clearly the better choice.";
+    return option2 + rest;
   }
 }
 
