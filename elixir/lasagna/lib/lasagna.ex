@@ -4,7 +4,9 @@ defmodule Lasagna do
     40
   end
   # Please define the 'remaining_minutes_in_oven/1' function
-
+  def remaining_minutes_in_oven(passed) do
+    40 - passed
+  end
   # Please define the 'preparation_time_in_minutes/1' function
 
   # Please define the 'total_time_in_minutes/2' function
