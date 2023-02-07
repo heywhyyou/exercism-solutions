@@ -4,7 +4,7 @@ defmodule Lasagna do
   end
 
   def remaining_minutes_in_oven(passed) do
-    40 - passed
+    expected_minutes_in_oven() - passed
   end
 
   def preparation_time_in_minutes(layers) do
