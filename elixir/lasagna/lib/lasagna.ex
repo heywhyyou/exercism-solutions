@@ -16,4 +16,7 @@ defmodule Lasagna do
     preparation_time_in_minutes(layers) + mins
   end
   # Please define the 'alarm/0' function
+  def alarm do
+    "Ding!"
+  end
 end
