@@ -6,7 +6,9 @@ defmodule Secrets do
   end
 
   def secret_subtract(secret) do
-    # Please implement the secret_subtract/1 function
+    fn sub_this ->
+      sub_this - secret
+    end
   end
 
   def secret_multiply(secret) do
