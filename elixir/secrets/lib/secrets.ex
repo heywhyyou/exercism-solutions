@@ -18,7 +18,9 @@ defmodule Secrets do
   end
 
   def secret_divide(secret) do
-    # Please implement the secret_divide/1 function
+    fn div_this ->
+      div(div_this, secret)
+    end
   end
 
   def secret_and(secret) do
