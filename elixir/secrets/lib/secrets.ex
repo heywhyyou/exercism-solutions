@@ -24,7 +24,9 @@ defmodule Secrets do
   end
 
   def secret_and(secret) do
-    # Please implement the secret_and/1 function
+    fn ander ->
+    Bitwise.band(ander, secret)
+    end
   end
 
   def secret_xor(secret) do
