@@ -1,6 +1,8 @@
 defmodule Secrets do
   def secret_add(secret) do
-    # Please implement the secret_add/1 function
+    fn add_this ->
+      add_this + secret
+    end
   end
 
   def secret_subtract(secret) do
