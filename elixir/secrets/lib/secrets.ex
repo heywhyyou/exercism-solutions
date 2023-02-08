@@ -12,7 +12,9 @@ defmodule Secrets do
   end
 
   def secret_multiply(secret) do
-    # Please implement the secret_multiply/1 function
+    fn mul_this ->
+      mul_this * secret
+    end
   end
 
   def secret_divide(secret) do
