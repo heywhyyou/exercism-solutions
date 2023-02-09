@@ -67,5 +67,10 @@ export function limesToCut(wedgesNeeded, limes) {
  * @returns {string[]} remaining orders after the time is up
  */
 export function remainingOrders(timeLeft, orders) {
-  throw new Error("Please implement the remainingOrders function");
+  let orderNumber = 0;
+  do {
+    timeLeft -= timeToMixJuice(orders[orderNumber]);
+    orders.shift();
+  } while (timeLeft > 0);
+  return orders;
 }
