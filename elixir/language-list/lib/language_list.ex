@@ -1,6 +1,6 @@
 defmodule LanguageList do
   def new() do
-    new_empty_list = []
+    []
   end
 
   def add(list, language) do
