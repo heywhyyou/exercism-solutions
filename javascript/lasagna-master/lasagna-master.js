@@ -20,3 +20,11 @@ export function cookingStatus(timer) {
     return "You forgot to set the timer.";
   }
 }
+
+export function preparationTime(layers, minutes = 2) {
+  let prepTime = 0;
+  for (let i = 0; i < layers.length; i++) {
+    prepTime += minutes;
+  }
+  return prepTime;
+}
