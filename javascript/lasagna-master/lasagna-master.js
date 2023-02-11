@@ -28,3 +28,15 @@ export function preparationTime(layers, minutes = 2) {
   }
   return prepTime;
 }
+
+export function quantities(layers) {
+  const ingNeeded = { noodles: 0, sauce: 0 };
+  for (let i = 0; i < layers.length; i++) {
+    if (layers[i] === "noodles") {
+      ingNeeded.noodles += 50;
+    } else if (layers[i] === "sauce") {
+      ingNeeded.sauce += 0.2;
+    }
+  }
+  return ingNeeded;
+}
