@@ -40,3 +40,7 @@ export function quantities(layers) {
   }
   return ingNeeded;
 }
+
+export function addSecretIngredient(friendsList, myList) {
+  myList.push(friendsList[friendsList.length - 1]);
+}
