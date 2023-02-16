@@ -14,7 +14,7 @@
  */
 
 export function buildSign(occasion, name) {
-  throw new Error('Implement the buildSign function');
+  return `Happy ${occasion} ${name}!`;
 }
 
 /**
@@ -26,7 +26,7 @@ export function buildSign(occasion, name) {
  */
 
 export function buildBirthdaySign(age) {
-  throw new Error('Implement the buildBirthdaySign function');
+  throw new Error("Implement the buildBirthdaySign function");
 }
 
 /**
@@ -39,7 +39,7 @@ export function buildBirthdaySign(age) {
  */
 
 export function graduationFor(name, year) {
-  throw new Error('Implement the graduationForm function');
+  throw new Error("Implement the graduationForm function");
 }
 
 /**
@@ -53,5 +53,5 @@ export function graduationFor(name, year) {
  */
 
 export function costOf(sign, currency) {
-  throw new Error('Implement the costOf function');
+  throw new Error("Implement the costOf function");
 }
