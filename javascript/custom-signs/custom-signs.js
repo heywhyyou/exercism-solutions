@@ -56,5 +56,5 @@ Class of ${year}`;
  */
 
 export function costOf(sign, currency) {
-  throw new Error("Implement the costOf function");
+  return `Your sign costs ${(20 + sign.length * 2.0).toFixed(2)} ${currency}.`;
 }
