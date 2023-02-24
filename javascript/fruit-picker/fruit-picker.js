@@ -9,14 +9,15 @@
 //
 // In your own projects, files, and code, you can play with @ts-check as well.
 
-import { notify } from './notifier';
-import { order } from './grocer';
+import { notify } from "./notifier";
+import { order } from "./grocer";
 
 /**
  * @return void
  */
 export function onSuccess() {
   // implement the onSuccess callback to call notify with a success message
+  return notify({ message: "SUCCESS" });
 }
 
 /**
