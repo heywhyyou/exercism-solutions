@@ -70,7 +70,13 @@ export function sandwichTrick(deck) {
  * @returns {number[]} deck with only 2s
  */
 export function twoIsSpecial(deck) {
-  throw new Error("Implement the twoIsSpecial function");
+  const pushTwos = (acc, currentValue) => {
+    if (currentValue === 2) {
+      acc.push(currentValue);
+    }
+    return acc;
+  };
+  return deck.reduce(pushTwos, []);
 }
 
 /**
