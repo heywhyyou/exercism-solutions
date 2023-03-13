@@ -1,4 +1,5 @@
 package techpalace
+
 import "strings"
 
 // WelcomeMessage returns a welcome message for the customer.
@@ -8,7 +9,8 @@ func WelcomeMessage(customer string) string {
 
 // AddBorder adds a border to a welcome message.
 func AddBorder(welcomeMsg string, numStarsPerLine int) string {
-	panic("Please implement the AddBorder() function")
+	var fanciness string = strings.Repeat("*", numStarsPerLine)
+	return string(fanciness + "\n" + welcomeMsg + "\n" +fanciness)
 }
 
 // CleanupMessage cleans up an old marketing message.
