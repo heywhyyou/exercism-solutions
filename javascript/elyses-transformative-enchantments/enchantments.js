@@ -19,7 +19,18 @@ export function seeingDouble(deck) {
  * @returns {number[]} deck with triplicate 3s
  */
 export function threeOfEachThree(deck) {
-  throw new Error("Implement the threeOfEachThree function");
+  const tripleTheThrees = (acc, currentValue) => {
+    if (currentValue === 3) {
+      acc.push(currentValue);
+      acc.push(currentValue);
+      acc.push(currentValue);
+    } else {
+      acc.push(currentValue);
+    }
+    return acc;
+  };
+
+  return deck.reduce(tripleTheThrees, []);
 }
 
 /**
