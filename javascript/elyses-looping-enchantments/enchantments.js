@@ -9,9 +9,13 @@
  * @returns {number} number of cards of a single type there are in the deck
  */
 export function cardTypeCheck(stack, card) {
-  let num = 0;
-  stack.forEach((cards) => (cards === card ? num++ : ""));
-  return num;
+  // let num = 0;
+  // stack.forEach((cards) => (cards === card ? num++ : ""));
+  // return num;
+  //
+  // Using .filter() method instead of .forEach():
+  const counter = stack.filter((type) => type === card);
+  return counter.length;
 }
 
 /**
