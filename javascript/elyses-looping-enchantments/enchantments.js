@@ -14,8 +14,13 @@ export function cardTypeCheck(stack, card) {
   // return num;
   //
   // Using .filter() method instead of .forEach():
-  const counter = stack.filter((type) => type === card);
-  return counter.length;
+
+  // return stack.filter((type) => type === card).length;
+
+  // Making use of && instead of ?:
+  let counter = 0;
+  stack.forEach((oneCard) => oneCard === card && counter++);
+  return counter;
 }
 
 /**
@@ -25,16 +30,27 @@ export function cardTypeCheck(stack, card) {
  * @param {boolean} type the type of value to check for - odd or even
  * @returns {number} number of cards that are either odd or even (depending on `type`)
  */
+// Old solution:
+
+// export function determineOddEvenCards(stack, type) {
+//   let num = 0;
+//   if (type) {
+//     for (const card of stack) {
+//       card % 2 === 0 ? num++ : "";
+//     }
+//   } else {
+//     for (const card of stack) {
+//       card % 2 !== 0 ? num++ : "";
+//     }
+//   }
+//   return num;
+// }
+
+// Fancy .filter() solution:
+
 export function determineOddEvenCards(stack, type) {
-  let num = 0;
-  if (type) {
-    for (const card of stack) {
-      card % 2 === 0 ? num++ : "";
-    }
-  } else {
-    for (const card of stack) {
-      card % 2 !== 0 ? num++ : "";
-    }
-  }
-  return num;
+  return stack.filter((card) => {
+    if (type && card % 2 === 0) return card;
+    if (!type && card % 2 !== 0) return card;
+  }).length;
 }
